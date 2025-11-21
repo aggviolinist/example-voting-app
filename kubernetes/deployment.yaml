@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voting-app
+  labels:
+    app: voting-app
+
+spec:
+  revisionHistoryLimit: 1
+  replicas: 2
+  selector:
+    matchLabels:
+      app: voting-app # Match pods with this label
+
+  template:
+    metadata:
+      labels:
+        app: voting-app # Template defines what each Pod looks like
