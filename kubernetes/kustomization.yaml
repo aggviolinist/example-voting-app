@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# List all the manifest files you want Argo CD to deploy
+# These resources MUST be relative to the kustomization.yaml file's location.
+resources:
+  # Redis components
+  - redis-deploy.yaml
+  - redis-service.yaml
+  
+  # Postgres components (renamed from 'db-service.yaml' to match your naming)
+  - postgres-deploy.yaml
+  - postgres-service.yaml
+
+  # Voting App components
+  - voting-app-deploy.yaml
+  - voting-app-service.yaml
+
+  # Results App components
+  - results-app-deploy.yaml
+  - results-app-service.yaml
+  
+  # Worker component
+  - worker-deploy.yaml
+  
+# NOTE: I excluded the 'argoCD' and 'pods' subdirectories 
+# as they likely contain configuration files or are not meant for direct deployment.
