@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: voting-app
-          image: violinist999/vote:v1 
+          image: violinist999/vote:10
           ports: 
           - containerPort: 80
           

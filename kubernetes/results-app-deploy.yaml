@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: results-app
-        image: violinist999/result:v1
+        image: violinist999/votingapp-result:10
         ports:
         - containerPort: 80
