@@ -144,6 +144,17 @@ pipeline {
             }
         }
 
+
+        stage('Approval for Deployment') {
+            steps {
+                script {
+                    input message: 'Do you want to deploy to Kubernetes?', 
+                          ok: 'Deploy',
+                          submitter: 'admin'
+                }
+            }
+        }
+
         stage('Update K8s Manifests') {
             agent {
                 docker {
