@@ -5,4 +5,4 @@ metadata:
   name: voting-app-ns 
   labels:
     # 2. CHANGE 'foo' to the Argo CD installation namespace
-    argocd.argoproj.io/managed-by: argocd
+    argocd.argoproj.io/managed-by: default
