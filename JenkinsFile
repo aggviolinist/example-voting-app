@@ -159,8 +159,9 @@ pipeline {
                         
                         git config --global --add safe.directory ${WORKSPACE}
                         git clean -fd
-                        git fetch origin ${GIT_BRANCH}
+                        git fetch origin             
                         git checkout ${GIT_BRANCH}
+                        git reset --hard origin/${GIT_BRANCH}
                         git pull origin ${GIT_BRANCH}
                         
                         git config user.email "mulandimaei76@gmail.com" 
