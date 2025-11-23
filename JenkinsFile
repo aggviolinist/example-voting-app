@@ -160,9 +160,9 @@ pipeline {
                         git config --global --add safe.directory ${WORKSPACE}
                         git clean -fd
                         git fetch origin             
-                        git checkout ${GIT_BRANCH}
+                        git checkout main
                         git reset --hard origin/main
-                        git pull origin ${GIT_BRANCH}
+                        git pull origin main
                         
                         git config user.email "mulandimaei76@gmail.com" 
                         git config user.name "${GIT_USER_NAME}"
@@ -197,7 +197,7 @@ pipeline {
                         else
                             git commit -m "Updated Docker images to build ${BUILD_NUMBER}"
                             git pull --rebase origin ${GIT_BRANCH}
-                            git push https://${GITHUBTOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}.git HEAD:${GIT_BRANCH}
+                            git push https://${GITHUBTOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}.git HEAD:main
                         fi
                     '''
                 }
