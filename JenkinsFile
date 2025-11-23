@@ -92,7 +92,7 @@ pipeline {
                 script {
                     echo "Pushing Vote image to Docker Hub..."
                     def dockerImage = docker.image("${DOCKER_IMAGE}")
-                    docker.withRegistry("${DOCKER_REGISTRY_URL}", 'dockerhub-creds') {
+                    docker.withRegistry("${DOCKER_REGISTRY_URL}", 'docker-creds') {
                         dockerImage.push()
                         dockerImage.push('latest')
                     }
@@ -114,7 +114,7 @@ pipeline {
                 script {
                     echo "Pushing Result image to Docker Hub..."
                     def dockerImage = docker.image("${DOCKER_IMAGE}")
-                    docker.withRegistry("${DOCKER_REGISTRY_URL}", 'dockerhub-creds') {
+                    docker.withRegistry("${DOCKER_REGISTRY_URL}", 'docker-creds') {
                         dockerImage.push()
                         dockerImage.push('latest')
                     }
@@ -136,7 +136,7 @@ pipeline {
                 script {
                     echo "Pushing Result image to Docker Hub..."
                     def dockerImage = docker.image("${DOCKER_IMAGE}")
-                    docker.withRegistry("${DOCKER_REGISTRY_URL}", 'dockerhub-creds') {
+                    docker.withRegistry("${DOCKER_REGISTRY_URL}", 'docker-creds') {
                         dockerImage.push()
                         dockerImage.push('latest')
                     }
