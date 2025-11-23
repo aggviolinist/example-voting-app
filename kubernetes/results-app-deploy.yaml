@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: results-app
-        image: violinist999/result:13
+        image: violinist999/result:14
         ports:
         - containerPort: 80
