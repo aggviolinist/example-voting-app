@@ -25,3 +25,13 @@ sudo systemctl status jenkins
 
 # Get the initial admin password
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+######Ownership issues######
+# Fix ownership of Jenkins workspace
+#sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/
+
+# Or fix just this specific workspace
+#sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/voting-app-pipeline/
+
+# Also fix permissions
+#sudo chmod -R 755 /var/lib/jenkins/workspace/voting-app-pipeline/
