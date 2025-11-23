@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  # 1. CHANGE 'bar' to your desired namespace name
+  name: voting-app-ns 
+  labels:
+    # 2. CHANGE 'foo' to the Argo CD installation namespace
+    argocd.argoproj.io/managed-by: argocd
