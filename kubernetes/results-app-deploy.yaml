@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: results-app-deploy
-  namespace: voting-app-ns
   labels:
     name: results-app-deploy
     app: demo-voting-app
