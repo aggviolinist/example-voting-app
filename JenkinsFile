@@ -177,7 +177,7 @@ pipeline {
                         
                         # Update result deployment
                         if [ -f kubernetes/results-app-deploy.yaml ]; then
-                            sed -i "s|image:.*result:.*|image: violinist999/votingapp-result:${BUILD_NUMBER}|g" kubernetes/results-app-deploy.yaml
+                            sed -i "s|image:.*result:.*|image: violinist999/result:${BUILD_NUMBER}|g" kubernetes/results-app-deploy.yaml
                             git add kubernetes/results-app-deploy.yaml
                         else
                             echo "WARNING: kubernetes/results-app-deploy.yaml not found!"
@@ -185,7 +185,7 @@ pipeline {
 
                          # Update worker deployment
                         if [ -f kubernetes/worker-deploy.yaml ]; then
-                            sed -i "s|image:.*result:.*|image: violinist999/votingapp-worker:${BUILD_NUMBER}|g" kubernetes/worker-deploy.yaml
+                            sed -i "s|image:.*result:.*|image: violinist999/worker:${BUILD_NUMBER}|g" kubernetes/worker-deploy.yaml
                             git add kubernetes/worker-deploy.yaml
                         else
                             echo "WARNING: kubernetes/worker-deploy.yaml not found!"
