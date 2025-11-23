@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres-deploy
+  namespace: voting-app-ns
   labels:
     name: postgres-deploy
     app: demo-voting-app
