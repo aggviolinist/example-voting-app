@@ -2,7 +2,7 @@
 
 A simple distributed application running across multiple Docker containers.
 
-> ![Alt text](images/voting-app.png?raw=true "The architecture diagram")
+>![Alt text](images/voting-app.png?raw=true "The architecture diagram")
 
 ## Getting started
 
