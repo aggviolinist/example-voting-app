@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: mapvolumes
 data: 
-  POSTRGRES_USER: postgres
+  POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
 
