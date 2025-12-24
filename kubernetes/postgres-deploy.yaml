@@ -18,13 +18,20 @@ spec:
         name: postgres-pod
         app: demo-voting-app
     spec:
+      volumes: 
+      - name: volmap
+        configMap: 
+          name: mapvolumes
       containers:
       - name: postgres
         image: postgres
         ports:
         - containerPort: 5432
-        env: 
-         - name: POSTRGRES_USER
-           value: "postgres"
-         - name: POSTGRES_PASSWORD
-           value: "postgres"
+        volumeMounts: 
+         - name: volmap
+           mountPath: /etc/name
+        # env: 
+        #  - name: POSTRGRES_USER
+        #    value: "postgres"
+        #  - name: POSTGRES_PASSWORD
+        #    value: "postgres"
