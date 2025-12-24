@@ -27,6 +27,9 @@ spec:
         image: postgres
         ports:
         - containerPort: 5432
+        envFrom:
+        - configMapRef: 
+            name: mapvolumes
         volumeMounts: 
          - name: volmap
            mountPath: /etc/name
